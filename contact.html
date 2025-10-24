@@ -21,7 +21,8 @@
       </ul>
     </nav>
   </header>
-
+  
+  <main>
   <section class="contact-section">
     <div class="contact-content">
       <h1 class="section-heading">Get In <span class="highlight">Touch</span></h1>
@@ -30,6 +31,7 @@
       </p>
 
       <div class="contact-container">
+        
         <div class="contact-info-side">
           <h2>Find Me Here</h2>
           <div class="info-item">
@@ -52,10 +54,130 @@
             <a href="mailto:nguyenhakhanhvy1106@gmail.com" title="Direct Email"><i class="fas fa-at"></i></a>
             <a href="https://www.facebook.com/khanhvynguyen.06" target="_blank" title="Facebook"><i class="fab fa-facebook"></i></a>
           </div>
+          
+          <h2 class="social-heading">📍 Location Map</h2>
+          <figure class="map-figure">
+              <iframe 
+                src="https://maps.google.com/maps?q=276%20Tô%20Ngọc%20Vân,%20Thủ%20Đức&t=&z=13&ie=UTF8&iwloc=&output=embed" 
+                width="100%" 
+                height="250" 
+                style="border:0;" 
+                allowfullscreen="" 
+                loading="lazy" 
+                referrerpolicy="no-referrer-when-downgrade"
+                title="Map of 276 To Ngoc Van"
+              ></iframe>
+              <figcaption>Location of 276 To Ngoc Van, Ho Chi Minh City.</figcaption>
+          </figure>
+          </div>
+
+        <div class="contact-form-side">
+          <h2>Send a Detailed Inquiry</h2>
+          <form action="mailto:nguyenhakhanhvy1106@gmail.com" method="POST" enctype="text/plain" class="full-contact-form">
+            
+            <fieldset>
+              <legend>Basic Information</legend>
+              <div class="form-row">
+                <label for="name">Your Name</label>
+                <input type="text" id="name" name="name" placeholder="Name (Ex: Nguyen Vy)" required>
+              </div>
+              <div class="form-row">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="Your Email" required>
+              </div>
+              <div class="form-row">
+                <label for="tel">Phone Number</label>
+                <input type="tel" id="tel" name="tel" placeholder="090-XXXX-XXXX" pattern="[0-9]{10,11}" required>
+                <small>Format: 09012345678 (10-11 digits)</small>
+              </div>
+            </fieldset>
+
+            <fieldset>
+              <legend>Project/Request Details</legend>
+              <div class="form-row">
+                <label for="project-type">What type of collaboration are you looking for?</label>
+                <select id="project-type" name="project-type">
+                  <optgroup label="Front-end Development">
+                    <option value="portfolio">Portfolio Design</option>
+                    <option value="web-app">Web App Development</option>
+                  </optgroup>
+                  <optgroup label="Other">
+                    <option value="feedback">Feedback/Comment</option>
+                    <option value="other">Other (Contact for details)</option>
+                  </optgroup>
+                </select>
+              </div>
+
+              <div class="form-row">
+                <label for="budget">Estimated Budget (VND)</label>
+                <input type="number" id="budget" name="budget" min="500000" max="50000000" step="500000" value="5000000" required>
+                <small>Range: 500,000 - 50,000,000 VND</small>
+              </div>
+
+              <div class="form-row">
+                <label for="deadline">Desired Deadline</label>
+                <input type="date" id="deadline" name="deadline" required>
+              </div>
+
+              <div class="form-row">
+                <label for="satisfaction-range">Cooperation Priority Level (Low - High)</label>
+                <input type="range" id="satisfaction-range" name="satisfaction-range" min="1" max="10" step="1" value="5">
+              </div>
+
+              <div class="form-row">
+                <label for="message">Detailed Content</label>
+                <textarea id="message" name="message" rows="5" placeholder="Describe your project/request..." required></textarea>
+              </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>Other Options</legend>
+                <div class="form-row form-checkbox-group">
+                    <p>Have you reviewed my Portfolio?</p>
+                    <input type="radio" id="seen-yes" name="seen-portfolio" value="yes" required>
+                    <label for="seen-yes">Yes</label>
+                    <input type="radio" id="seen-no" name="seen-portfolio" value="no">
+                    <label for="seen-no">No</label>
+                </div>
+                
+                <div class="form-row form-checkbox-group">
+                    <input type="checkbox" id="newsletter" name="newsletter" checked>
+                    <label for="newsletter">Subscribe to the latest news</label>
+                </div>
+
+                <div class="form-row">
+                    <label for="password">Set Temporary Password (If confidential)</label>
+                    <input type="password" id="password" name="password">
+                </div>
+                
+                <div class="form-row">
+                    <label for="file">Upload Attachment File</label>
+                    <input type="file" id="file" name="file">
+                </div>
+
+                <div class="form-row">
+                    <label for="fav-color">Choose preferred interface color</label>
+                    <input type="color" id="fav-color" name="fav-color" list="color-presets">
+                    <datalist id="color-presets">
+                        <option value="#8665f0">Primary</option>
+                        <option value="#FFFFFF">White</option>
+                        <option value="#000000">Black</option>
+                    </datalist>
+                </div>
+
+                <input type="hidden" name="form-version" value="v1.2">
+            </fieldset>
+            
+            <div class="form-buttons">
+                <button type="submit" class="submit-btn">Send Request</button>
+                <button type="reset" class="reset-btn">Reset Form</button>
+            </div>
+          </form>
         </div>
         </div>
     </div>
   </section>
+  </main>
 
   <footer>
     <p>© 2025 Nguyen Ha Khanh Vy. All Rights Reserved.</p>
