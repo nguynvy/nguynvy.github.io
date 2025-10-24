@@ -71,6 +71,7 @@ header {
   max-width: 800px;
   margin: 0 auto;
   line-height: 1.8;
+  
 }
 
 /* === GENERAL SECTION TITLE STYLING === */
@@ -78,7 +79,7 @@ header {
   font-size: 2rem;
   text-align: center;
   margin-bottom: 2.5rem;
-  color: #111; /* Mặc định là đen cho nền sáng */
+  color: #111; 
   position: relative;
 }
 
@@ -139,7 +140,7 @@ header {
 
 /* --- SKILL BARS (Thanh tiến trình) --- */
 .project-card .skill-item {
-    margin-top: 1.5rem; /* Khoảng cách từ mô tả chính */
+    margin-top: 1.5rem; 
     margin-bottom: 0.7rem; 
 }
 
@@ -152,7 +153,7 @@ header {
 
 .project-card .progress-bar-container {
     background-color: #333; 
-    height: 8px; /* Thanh mỏng hơn */
+    height: 8px; 
     border-radius: 4px;
     overflow: hidden;
 }
@@ -161,7 +162,6 @@ header {
     height: 100%;
     background-color: #8665f0;
     transition: width 1s ease-out;
-    /* Ẩn text bên trong thanh nhỏ */
     color: transparent; 
     font-size: 0;
 }
@@ -192,17 +192,44 @@ footer {
   font-size: 0.9rem;
 }
 
-/* === RESPONSIVE === */
-@media (max-width: 768px) {
-  .projects-intro h1 {
-    font-size: 2.2rem;
-  }
+/* === RESPONSIVE FIXES === */
 
-  .section-title {
-    font-size: 1.8rem;
-  }
+@media (max-width: 900px) {
+    /* NAVBAR */
+    header {
+        padding: 1rem 5%;
+    }
+    .navbar {
+        flex-direction: column; 
+        gap: 1rem;
+    }
+    
+    /* PADDING CHO CÁC SECTION */
+    .projects-intro, .projects, .reflection {
+        padding: 4rem 5%;
+    }
 
-  .project-card {
-    padding: 1.5rem;
-  }
+    /* TIÊU ĐỀ */
+    .projects-intro h1 {
+        font-size: 2.2rem;
+    }
+    .section-title {
+        font-size: 1.8rem;
+    }
+}
+
+@media (max-width: 600px) {
+    /* PADDING CĂN LỀ SÁT HƠN */
+    .projects-intro, .projects, .reflection {
+        padding: 3rem 3%;
+    }
+    
+    /* PROJECT LIST: Chuyển sang 1 cột */
+    .project-list {
+        grid-template-columns: 1fr;
+    }
+    
+    .project-card {
+        padding: 1.5rem;
+    }
 }
