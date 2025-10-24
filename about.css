@@ -195,3 +195,75 @@ footer {
       text-align: center; /* Căn giữa nút trên mobile */
   }
 }
+/* === GALLERY STYLING (CHỈNH SỬA) === */
+
+.gallery-container {
+    width: 100%;
+    padding: 0 8%; /* Căn chỉnh với các section khác */
+    margin-top: 4rem;
+    background-color: #1a1a1a; /* Thêm nền để tách biệt với nền trắng của About */
+    padding-top: 2rem;
+    padding-bottom: 4rem;
+}
+
+.gallery-heading {
+    text-align: center;
+    font-size: 2rem;
+    color: #8665f0; 
+    margin-bottom: 2rem;
+}
+
+.about-gallery {
+    display: grid;
+    /* Hiển thị 3 cột là đẹp nhất cho gallery */
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 1.5rem;
+}
+
+.gallery-item {
+    background-color: #000; /* Nền tối hơn cho mỗi item ảnh */
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    margin: 0; 
+}
+
+.gallery-img {
+    width: 100%;
+    height: 250px; /* Chiều cao cố định và đồng nhất */
+    object-fit: cover; /* Đảm bảo ảnh lấp đầy khung */
+    display: block;
+    transition: transform 0.3s;
+}
+
+.gallery-img:hover {
+    transform: scale(1.05);
+}
+
+/* Định dạng cho figcaption (nếu có) */
+.gallery-item figcaption {
+    padding: 0.8rem 0.5rem;
+    font-size: 0.85rem;
+    text-align: center;
+    color: #ccc; 
+    background-color: #111;
+}
+
+/* RESPONSIVE cho Gallery */
+@media (max-width: 900px) {
+    .about-gallery {
+        grid-template-columns: repeat(2, 1fr); 
+    }
+    .gallery-img {
+        height: 200px; 
+    }
+}
+
+@media (max-width: 600px) {
+    .about-gallery {
+        grid-template-columns: 1fr; 
+    }
+    .gallery-img {
+        height: 250px;
+    }
+}
