@@ -160,15 +160,70 @@ footer {
   font-size: 0.9rem;
 }
 
-/* === RESPONSIVE === */
-@media (max-width: 768px) {
-  .hero {
-    flex-direction: column;
-    text-align: center;
+/* === RESPONSIVE FIXES === */
+
+/* Tablet và Mobile (Max 900px) */
+@media (max-width: 900px) {
+  /* NAVBAR */
+  header {
+    padding: 1rem 5%;
   }
 
-  .about {
-    flex-direction: column;
+  /* HERO */
+  .hero {
+    flex-direction: column; /* Xếp dọc content và image */
     text-align: center;
+    padding: 4rem 5% 0; /* Giảm padding */
   }
+
+  .hero-content {
+    max-width: 100%;
+    padding-top: 2rem;
+  }
+  
+  .hero-content h1 {
+    font-size: 2.2rem;
+  }
+
+  .hero-image img {
+    height: 450px; /* Giảm chiều cao ảnh hero */
+    width: 100%;
+  }
+
+  /* ABOUT PREVIEW */
+  .about {
+    flex-direction: column; /* Xếp dọc ảnh và text */
+    text-align: center;
+    padding: 4rem 5%;
+  }
+  
+  .about-image img {
+    width: 100%;
+    max-width: 350px;
+  }
+}
+
+/* Mobile nhỏ (Max 600px) */
+@media (max-width: 600px) {
+    /* NAVBAR */
+    .navbar {
+        flex-direction: column; /* Logo và links xếp dọc */
+        gap: 1rem;
+    }
+    
+    /* HERO */
+    .hero {
+        padding: 2rem 3% 0;
+    }
+    .hero-content h1 {
+        font-size: 1.8rem;
+    }
+    .hero-image img {
+        height: 350px;
+    }
+
+    /* ABOUT */
+    .about {
+        padding: 3rem 3%;
+    }
 }
