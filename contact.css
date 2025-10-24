@@ -1,0 +1,178 @@
+/* === RESET & BASE === */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background-color: #111; /* Nền tối cho trang Contact */
+  color: #fff;
+}
+
+/* === NAVBAR (Tái sử dụng) === */
+header {
+  background-color: #000;
+  color: #fff;
+  padding: 1rem 3rem;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  color: #8665f0;
+}
+
+/* === CONTACT SECTION STYLING === */
+.contact-section {
+  padding: 5rem 8%;
+  background-color: #111;
+  min-height: 80vh;
+}
+
+.section-heading {
+  font-size: 2.8rem;
+  text-align: center;
+  margin-bottom: 0.5rem;
+}
+
+.section-subtext {
+  text-align: center;
+  font-size: 1rem;
+  color: #ccc;
+  max-width: 700px;
+  margin: 0 auto 3rem;
+  line-height: 1.6;
+}
+
+.highlight {
+  color: #8665f0;
+}
+
+.contact-container {
+  /* Đã sửa: Sử dụng Flexbox để căn giữa nội dung */
+  display: flex;
+  justify-content: center; /* Căn giữa theo chiều ngang */
+  align-items: flex-start;
+  width: 100%;
+}
+
+/* --- Info Side (Đã được căn giữa) --- */
+.contact-info-side {
+  /* Giới hạn chiều rộng để nội dung không bị quá rộng */
+  max-width: 400px; 
+  width: 100%;
+  padding: 2.5rem;
+  background: #1a1a1a;
+  border-radius: 10px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.4);
+  color: #ccc;
+  text-align: center; /* Căn giữa tiêu đề và nút */
+}
+
+.contact-info-side h2 {
+    font-size: 1.8rem;
+    color: #fff;
+    margin-bottom: 1rem;
+}
+
+.social-heading {
+    margin-top: 2rem;
+}
+
+/* Thông tin email/location cần được căn giữa */
+.info-item {
+  display: flex;
+  justify-content: center; /* Căn giữa icon và text */
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.info-item i {
+  font-size: 1.5rem;
+}
+
+.social-links {
+    margin-top: 1rem;
+}
+
+.social-links a {
+  color: #fff;
+  font-size: 1.8rem;
+  margin: 0 0.8rem; /* Căn giữa các icon */
+  transition: color 0.3s;
+}
+
+.social-links a:hover {
+  color: #8665f0;
+}
+
+.resume-download {
+    margin-top: 2rem;
+}
+
+.resume-btn {
+  display: inline-block;
+  background-color: #000;
+  color: #fff;
+  padding: 0.8rem 1.5rem;
+  border: 1px solid #8665f0;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: background-color 0.3s;
+}
+
+.resume-btn:hover {
+  background-color: #8665f0;
+  color: #000;
+}
+
+/* === FOOTER (Tái sử dụng) === */
+footer {
+  background-color: #000;
+  color: #fff;
+  text-align: center;
+  padding: 1rem 0;
+  font-size: 0.9rem;
+}
+
+/* === RESPONSIVE === */
+@media (max-width: 600px) {
+    .contact-section {
+        padding: 3rem 5%;
+    }
+    .section-heading {
+        font-size: 2.2rem;
+    }
+    .social-links a {
+        font-size: 1.5rem;
+        margin: 0 0.5rem;
+    }
+}

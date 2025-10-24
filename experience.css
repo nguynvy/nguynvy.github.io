@@ -1,0 +1,222 @@
+/* === RESET & BASE === */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background-color: #f5f5f5;
+  color: #222;
+}
+
+/* === NAVBAR === */
+header {
+  background-color: #000;
+  color: #fff;
+  padding: 1rem 3rem;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  color: #8665f0;
+}
+
+/* === INTRO SECTION === */
+.experience-intro {
+  text-align: center;
+  padding: 5rem 10%;
+  background-color: #111;
+  color: #fff;
+}
+
+.experience-intro h1 {
+  font-size: 2.8rem;
+  margin-bottom: 1.5rem;
+}
+
+.highlight {
+  color: #8665f0;
+}
+
+.experience-intro p {
+  font-size: 1rem;
+  color: #ccc;
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.8;
+}
+
+/* === GENERAL SECTION TITLE STYLING === */
+.section-title {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 2.5rem;
+  color: #111; /* Mặc định là màu đen cho nền sáng */
+  position: relative;
+}
+
+.section-title::after {
+  content: "";
+  display: block;
+  width: 80px;
+  height: 3px;
+  background: #8665f0;
+  margin: 0.5rem auto;
+  border-radius: 2px;
+}
+
+/* === COURSES SECTION (Nền trắng) === */
+.courses {
+  padding: 4rem 10%;
+  background-color: #fff;
+}
+
+.course-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+}
+
+.course-card {
+  background: #f5f5f5;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  border-left: 6px solid #8665f0;
+}
+
+.course-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+}
+
+.course-card h3 {
+  color: #000;
+  margin-bottom: 0.8rem;
+  font-size: 1.3rem;
+}
+
+.course-card p {
+  color: #333;
+  line-height: 1.6;
+}
+
+/* === PROJECTS SECTION (Nền đen) === */
+.projects {
+  background-color: #111;
+  color: #fff;
+  padding: 5rem 10%;
+}
+
+/* FIX LỖI MÀU CHỮ: Ghi đè màu tiêu đề cho nền đen */
+.projects .section-title {
+  color: #fff; 
+}
+/* Đảm bảo đường kẻ dưới vẫn hoạt động bình thường */
+.projects .section-title::after {
+  background: #8665f0;
+}
+
+
+.project-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.project-card {
+  background: #1e1e1e;
+  padding: 2rem;
+  border-radius: 12px;
+  border: 1px solid #333;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 6px 20px rgba(134, 101, 240, 0.3);
+}
+
+.project-card h3 {
+  color: #8665f0;
+  margin-bottom: 1rem;
+  font-size: 1.4rem;
+}
+
+.project-card p {
+  color: #ddd;
+  line-height: 1.6;
+}
+
+
+/* === REFLECTION SECTION === */
+.reflection {
+  padding: 5rem 10%;
+  background-color: #111;
+  text-align: center;
+}
+
+.reflection p {
+  max-width: 750px;
+  margin: 0 auto;
+  line-height: 1.8;
+  color: #fff;
+  font-size: 1.05rem;
+}
+
+.reflection .section-title {
+  color: #fff; 
+}
+
+/* === FOOTER === */
+footer {
+  background-color: #000;
+  color: #fff;
+  text-align: center;
+  padding: 1rem 0;
+  font-size: 0.9rem;
+}
+
+/* === RESPONSIVE === */
+@media (max-width: 768px) {
+  .experience-intro h1 {
+    font-size: 2.2rem;
+  }
+
+  .section-title {
+    font-size: 1.8rem;
+  }
+
+  .course-card, .project-card {
+    padding: 1.5rem;
+  }
+}
